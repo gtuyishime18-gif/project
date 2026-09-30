@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GS KIGEME -A- — official school website with academics, activities, updates and school life.">
 
     <title>GSKIGEME -A-</title>
-   
-  <link rel="stylesheet" href="in.css">
+
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="in.css">
 </head>
 
 <body>
@@ -32,7 +34,7 @@
         <a href="contact.html">Contact</a>
     </nav>
 
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation menu">☰</button>
 
 </header>
 
@@ -252,7 +254,7 @@
 
 
         <article>
-            <img src="learner.png" alt="Student Innovation">
+            <img src="images/learner.png" alt="Student Innovation">
 
             <div>
                 <h3>Innovation</h3>
@@ -292,15 +294,21 @@
         Receive the latest school news and announcements.
     </p>
 
-    <form>
+    <form id="newsletter-form">
 
+        <label for="subscriber-name" class="sr-only">Your full name</label>
         <input
+            id="subscriber-name"
+            name="name"
             type="text"
             placeholder="Your full name"
             required
         >
 
+        <label for="subscriber-email" class="sr-only">Your email address</label>
         <input
+            id="subscriber-email"
+            name="email"
             type="email"
             placeholder="Your email address"
             required
@@ -351,8 +359,8 @@
             <h3>Contact</h3>
 
             <p>Butare, Rwanda</p>
-            <p>Email: info@example.com</p>
-            <p>Phone: +250 7XX XXX XXX</p>
+            <p>Email: info@gskigeme.rw</p>
+            <p>Phone: +250 788 000 000</p>
 
         </div>
 
@@ -370,7 +378,14 @@
 
 
 <script src="js/script.js"></script>
+<script>
+    // Basic newsletter form handling (replace with real endpoint later)
+    document.getElementById('newsletter-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('Thanks for subscribing! We will keep you updated.');
+        this.reset();
+    });
+</script>
 
 </body>
 </html>
-
