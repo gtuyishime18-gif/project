@@ -18,7 +18,7 @@
         <div class="logo-circle">G</div>
 
         <div>
-            <h2>GS KIGEME -A</h2>
+            <h2>GS KIGEME -A-</h2>
             <span>all about our school</span>
         </div>
     </div>
